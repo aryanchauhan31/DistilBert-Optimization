@@ -1,4 +1,3 @@
-# DistilBert-Optimization
 
 # **README.md**
 
@@ -102,3 +101,25 @@ The following results are expected:
 ## **Author**
 - Notebook created using Hugging Face `transformers` and `datasets`.
 - Quantization performed using PyTorch.
+
+---
+
+## **Model Compression and Accuracy**
+
+### **1. Baseline Model**
+- **Model Size**: ~268 MB
+- **Accuracy**:
+    - MRPC: 87% (Accuracy), 89% (F1 Score)
+    - SST-2: 92% (Accuracy)
+
+### **2. Quantized Model**
+- **Compressed Model Size**: ~96 MB
+- **Accuracy**:
+    - MRPC: 86% (Accuracy), 88% (F1 Score)
+    - SST-2: 91% (Accuracy)
+
+### **Compression Ratio**
+- **MRPC**: ~2.79x smaller
+- **SST-2**: ~2.79x smaller
+
+The quantized models retain most of their accuracy while achieving significant compression.
